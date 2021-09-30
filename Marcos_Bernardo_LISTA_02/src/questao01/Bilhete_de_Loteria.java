@@ -6,7 +6,7 @@ import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
 public class Bilhete_de_Loteria {
-    int[] bilheteLoto;
+    private int[] bilheteLoto;
 
     public Bilhete_de_Loteria(int tam){
         this.bilheteLoto = new int[tam];
@@ -16,6 +16,14 @@ public class Bilhete_de_Loteria {
             bilheteLoto[i]= num.get(i);
         }
         Arrays.sort(bilheteLoto);
+    }
+
+    public int[] getBilheteLoto() {
+        return bilheteLoto;
+    }
+
+    public void setBilheteLoto(int[] bilheteLoto) {
+        this.bilheteLoto = bilheteLoto;
     }
 
     @Override
@@ -33,4 +41,5 @@ public class Bilhete_de_Loteria {
         }
         return i;
     }
+
 }
