@@ -46,4 +46,4 @@ public class Main {
         System.out.print(repessoas.listarFuncionariosComSalarioMaiorQue(2500));
         System.out.print(repessoas.listarGerentesDaArea("Manager"));
     }
-}
+}   //TODO debugar .tostrings; conferir funcionamento do cadastrarPessoa;
