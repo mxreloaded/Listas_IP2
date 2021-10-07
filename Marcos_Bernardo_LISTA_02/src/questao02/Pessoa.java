@@ -3,7 +3,7 @@ package questao02;
 import java.time.LocalDate;
 import java.util.Objects;
 
-public class Pessoa {
+abstract class Pessoa {
     private String nome;
     private LocalDate dataNascimento;
 

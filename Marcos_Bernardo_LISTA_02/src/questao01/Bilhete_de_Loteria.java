@@ -30,6 +30,7 @@ public class Bilhete_de_Loteria {
     public String toString() {
         return "[" + Arrays.toString(bilheteLoto) + "]";
     }
+
     public int qtdNumerosContidos(Bilhete_de_Loteria param){
         int i=0;
         for(int j : param.bilheteLoto){
