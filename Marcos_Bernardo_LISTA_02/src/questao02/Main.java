@@ -21,7 +21,7 @@ public class Main {
         Funcionario fun2 = new Funcionario("Luna", LocalDate.of(1992, 4, 20), 2800);
         Funcionario fun3 = new Funcionario("Ricardo", LocalDate.of(2000, 1, 25), 2500);
         Funcionario fun4 = new Funcionario("Jose", LocalDate.of(1984, 2, 14), 2800);
-        Funcionario fun5 = new Funcionario("Maria", LocalDate.of(1964, 9, 31), 3000);
+        Funcionario fun5 = new Funcionario("Maria", LocalDate.of(1964, 10, 31), 3000);
         Funcionario fun6 = new Funcionario("Victor", LocalDate.of(1985, 9, 25), 2500);
         repessoas.cadastrarPessoa(fun1);
         repessoas.cadastrarPessoa(fun2);
@@ -41,9 +41,9 @@ public class Main {
         repessoas.cadastrarPessoa(ger4);
         repessoas.cadastrarPessoa(ger5);
         repessoas.cadastrarPessoa(ger6);
-        repessoas.listarPessoasMaioresIdade();
-        repessoas.listarClientesMaioresIdade();
-        repessoas.listarFuncionariosComSalarioMaiorQue(2500);
-        repessoas.listarGerentesDaArea("Manager");
+        System.out.print(repessoas.listarPessoasMaioresIdade());
+        System.out.print(repessoas.listarClientesMaioresIdade());
+        System.out.print(repessoas.listarFuncionariosComSalarioMaiorQue(2500));
+        System.out.print(repessoas.listarGerentesDaArea("Manager"));
     }
 }
