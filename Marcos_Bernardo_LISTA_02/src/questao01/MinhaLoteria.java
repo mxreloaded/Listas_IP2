@@ -1,14 +1,13 @@
 package questao01;
 
 import java.util.ArrayList;
-import java.util.Scanner;
 
 public class MinhaLoteria{
 
     public static void main(String[] args){
         Bilhete_de_Loteria bilhetePremiado = new Bilhete_de_Loteria(6);
         ArrayList<String> vencedores = new ArrayList<>(10);
-        for(int x=6; x<=15; x++){
+        for(int x=15; x>=6; x--){
             ArrayList<Bilhete_de_Loteria> bilhetes = new ArrayList<>();
             int mega = 0, quina = 0, quadra = 0;
             int cont=0;

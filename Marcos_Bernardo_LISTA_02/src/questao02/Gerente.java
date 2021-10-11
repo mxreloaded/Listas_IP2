@@ -18,17 +18,16 @@ public class Gerente extends Funcionario{
         this.area = area;
     }
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (!(o instanceof Gerente)) return false;
-        if (!super.equals(o)) return false;
-        Gerente gerente = (Gerente) o;
-        return Objects.equals(getArea(), gerente.getArea());
+
+    public boolean equals(Gerente o) {
+        if(super.equals(o) && this.getArea().equals(o.getArea())){
+            return true;
+        }
+        return false;
     }
 
     @Override
     public String toString() {
-        return super.toString() + "|" + area;
+        return super.toString() + " | " + "Area: " + area;
     }
 }

@@ -34,16 +34,16 @@ public class Main {
         Gerente ger3 = new Gerente("Laura", LocalDate.of(2001, 6, 14), 5500, "Manager");
         Gerente ger4 = new Gerente("Kildson", LocalDate.of(2002, 7, 15), 5200, "Manager");
         Gerente ger5 = new Gerente("Thiago", LocalDate.of(2000, 9, 30), 5200, "Manager");
-        Gerente ger6 = new Gerente("Marcos", LocalDate.of(2001, 3, 18), 5200, "Manager");
+        Gerente ger6 = new Gerente("Marcos", LocalDate.of(2001, 3, 18), 6000, "Manager");
         repessoas.cadastrarPessoa(ger1);
         repessoas.cadastrarPessoa(ger2);
         repessoas.cadastrarPessoa(ger3);
         repessoas.cadastrarPessoa(ger4);
         repessoas.cadastrarPessoa(ger5);
         repessoas.cadastrarPessoa(ger6);
-        System.out.print(repessoas.listarPessoasMaioresIdade());
-        System.out.print(repessoas.listarClientesMaioresIdade());
-        System.out.print(repessoas.listarFuncionariosComSalarioMaiorQue(2500));
-        System.out.print(repessoas.listarGerentesDaArea("Manager"));
+        System.out.println(repessoas.listarPessoasMaioresIdade());
+        System.out.println(repessoas.listarClientesMaioresIdade());
+        System.out.println(repessoas.listarFuncionariosComSalarioMaiorQue(2500));
+        System.out.println(repessoas.listarGerentesDaArea("Manager"));
     }
-}   //TODO debugar .tostrings; conferir funcionamento do cadastrarPessoa;
+}  //Leitura está um pouco ruim, porém programa está 100% funcional.

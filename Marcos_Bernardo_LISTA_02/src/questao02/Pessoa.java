@@ -14,15 +14,14 @@ abstract class Pessoa {
 
     @Override
     public String toString() {
-        return nome + "|" + dataNascimento;
+        return "Nome: " +  nome + " | " + "Data de Nasc: " + dataNascimento;
     }
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (!(o instanceof Pessoa)) return false;
-        Pessoa pessoa = (Pessoa) o;
-        return nome.equals(pessoa.nome) && dataNascimento.equals(pessoa.dataNascimento);
+    public boolean equals(Pessoa o) {
+        if (this.getNome().equals(o.getNome()) && this.getDataNascimento().equals(o.getDataNascimento())) {
+            return true;
+        }
+        return false;
     }
 
     public LocalDate getDataNascimento() {

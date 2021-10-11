@@ -18,17 +18,15 @@ public class Cliente extends Pessoa {
         this.codigo = codigo;
     }
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (!(o instanceof Cliente)) return false;
-        if (!super.equals(o)) return false;
-        Cliente cliente = (Cliente) o;
-        return getCodigo() == cliente.getCodigo();
+    public boolean equals(Cliente o) {
+        if (super.equals(o) && this.getCodigo()==o.getCodigo()){
+            return true;
+        }
+        return false;
     }
 
     @Override
     public String toString() {
-        return super.toString() +"|"+ codigo;
+        return super.toString() +" | "+ "Codigo: " + codigo;
     }
 }

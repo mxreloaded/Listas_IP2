@@ -23,16 +23,14 @@ public class Funcionario extends  Pessoa {
 
     @Override
     public String toString() {
-        return super.toString() + "|" + salario + "|" + calcularImpostoDevido();//imposto não está sendo descontado do salário. Questão não pediu.
+        return super.toString() + " | " + "Salario: " + salario + " | " + "Imposto: " + calcularImpostoDevido();//imposto não está sendo descontado do salário. Questão não pediu.
     }
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (!(o instanceof Funcionario)) return false;
-        if (!super.equals(o)) return false;
-        Funcionario that = (Funcionario) o;
-        return Double.compare(that.getSalario(), getSalario()) == 0;
+    public boolean equals(Funcionario o) {
+        if(super.equals(o) && this.getSalario()==o.getSalario()){
+            return true;
+        }
+        return false;
     }
 
     public double getSalario() {

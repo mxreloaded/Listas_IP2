@@ -26,17 +26,14 @@ public class RepositorioPessoas {
             LocalDate date = novo.getDataNascimento();
             boolean existePessoaIgual = false;
             for(Pessoa interna : pessoas){
-                if(interna.getNome().equals(name)){
-                    if(interna.getDataNascimento().equals(date)){
-                        System.out.print("\nNão foi possível realizar o cadastro.");
-                        existePessoaIgual = true;
-                    }
-                }
-                if(!existePessoaIgual){
-                    this.pessoas.add(novo);
-                    System.out.print("\nCadastro realizado com sucesso.");
+                if(interna.equals(novo)){
+                    System.out.print("\nNão foi possível realizar o cadastro.\n");
+                    existePessoaIgual = true;
+                    return;
                 }
             }
+            this.pessoas.add(novo);
+            System.out.print("\nCadastro realizado com sucesso.");
         }
     }
     public ArrayList<Pessoa> listarPessoasMaioresIdade(){
@@ -64,7 +61,7 @@ public class RepositorioPessoas {
     public ArrayList<Funcionario> listarFuncionariosComSalarioMaiorQue(double sal){
         ArrayList<Funcionario> resultado = new ArrayList<>();
         for(Pessoa salario : this.pessoas){
-            if(salario instanceof Funcionario && ((Funcionario) salario).getSalario()>=sal){
+            if(salario instanceof Funcionario && ((Funcionario) salario).getSalario()>sal){
                 resultado.add((Funcionario) salario);
             }
         }
