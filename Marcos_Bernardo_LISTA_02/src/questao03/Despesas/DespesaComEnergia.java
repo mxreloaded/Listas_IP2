@@ -9,7 +9,7 @@ public class DespesaComEnergia extends Despesa{
         this.kwh=energia;
     }
 
-    public double getkwh() {
+    public double getKwh() {
         return kwh;
     }
 
@@ -22,19 +22,13 @@ public class DespesaComEnergia extends Despesa{
         return super.toString() + "|" + kwh;
     }
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (!(o instanceof DespesaComEnergia)) return false;
-        if (!super.equals(o)) return false;
-        DespesaComEnergia that = (DespesaComEnergia) o;
-        return Double.compare(that.getkwh(), getkwh()) == 0;
+    public boolean equals(DespesaComEnergia o) {
+        if (super.equals(o) && this.getKwh()==o.getKwh()){
+            return true;
+        }
+        return false;
     }
 
-    @Override
-    public int hashCode() {
-        return 0;
-    }
 
     @Override
     public double calcularTotal() {

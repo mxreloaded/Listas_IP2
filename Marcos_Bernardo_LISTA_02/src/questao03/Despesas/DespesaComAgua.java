@@ -22,18 +22,11 @@ public class DespesaComAgua extends Despesa{
         return super.toString() + "|" + totalM3;
     }
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (!(o instanceof DespesaComAgua)) return false;
-        if (!super.equals(o)) return false;
-        DespesaComAgua that = (DespesaComAgua) o;
-        return Double.compare(that.getTotalM3(), getTotalM3()) == 0;
-    }
-
-    @Override
-    public int hashCode() {
-        return 0;
+    public boolean equals(DespesaComAgua o) {
+        if (super.equals(o) && this.getTotalM3()==o.getTotalM3()){
+            return true;
+        }
+        return false;
     }
 
     @Override

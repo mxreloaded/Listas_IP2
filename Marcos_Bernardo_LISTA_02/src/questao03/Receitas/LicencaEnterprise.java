@@ -22,13 +22,11 @@ public class LicencaEnterprise extends Receita{
         return super.toString() + "|" + totalContas;
     }
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (!(o instanceof LicencaEnterprise)) return false;
-        if (!super.equals(o)) return false;
-        LicencaEnterprise that = (LicencaEnterprise) o;
-        return getTotalContas() == that.getTotalContas();
+    public boolean equals(LicencaEnterprise o) {
+        if (super.equals(o) && this.getTotalContas()==o.getTotalContas()){
+            return true;
+        }
+        return false;
     }
 
     @Override

@@ -22,13 +22,11 @@ public class LicencaBasica extends Receita{
         return super.toString() + "|" + totalContas;
     }
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (!(o instanceof LicencaBasica)) return false;
-        if (!super.equals(o)) return false;
-        LicencaBasica that = (LicencaBasica) o;
-        return getTotalContas() == that.getTotalContas();
+    public boolean equals(LicencaBasica o) {
+        if (super.equals(o) && this.getTotalContas()==o.getTotalContas()){
+            return true;
+        }
+        return false;
     }
 
     @Override

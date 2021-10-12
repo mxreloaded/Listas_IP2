@@ -21,7 +21,7 @@ public class Produto {
 
     @Override
     public String toString() {
-        return ref + " | " + nome + " | " + descricao + " | " + ref;
+        return ref + " | " + nome + " | " + descricao + " | " + cat;
     }
 
     public String getRef() {

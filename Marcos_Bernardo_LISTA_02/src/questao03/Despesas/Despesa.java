@@ -37,12 +37,11 @@ public abstract class Despesa implements Transacao {
         return data + "|" +  descricao;
     }
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (!(o instanceof Despesa)) return false;
-        Despesa despesa = (Despesa) o;
-        return Objects.equals(getData(), despesa.getData()) && Objects.equals(getDescricao(), despesa.getDescricao());
+    public boolean equals(Despesa o) {
+        if (this.getDescricao().equals(o.getDescricao())&&this.getData().equals(o.getData())){
+            return true;
+        }
+        return false;
     }
 
     @Override

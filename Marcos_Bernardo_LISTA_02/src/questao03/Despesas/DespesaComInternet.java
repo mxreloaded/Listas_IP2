@@ -22,18 +22,11 @@ public class DespesaComInternet extends Despesa {
         return super.toString() + "|" + dadosTrafegados;
     }
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (!(o instanceof DespesaComInternet)) return false;
-        if (!super.equals(o)) return false;
-        DespesaComInternet that = (DespesaComInternet) o;
-        return Double.compare(that.getDadosTrafegados(), getDadosTrafegados()) == 0;
-    }
-
-    @Override
-    public int hashCode() {
-        return 0;
+    public boolean equals(DespesaComInternet o) {
+        if (super.equals(o) && this.getDadosTrafegados()==o.getDadosTrafegados()){
+            return true;
+        }
+        return false;
     }
 
     @Override

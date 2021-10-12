@@ -3,7 +3,6 @@ package questao03.Receitas;
 import questao03.Interface.Transacao;
 
 import java.time.LocalDateTime;
-import java.util.Objects;
 
 public abstract class Receita implements Transacao {
     LocalDateTime data;
@@ -37,12 +36,12 @@ public abstract class Receita implements Transacao {
         return data + "|" + descricao;
     }
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (!(o instanceof Receita)) return false;
-        Receita receita = (Receita) o;
-        return Objects.equals(getData(), receita.getData()) && Objects.equals(getDescricao(), receita.getDescricao());
+
+    public boolean equals(Receita o) {
+        if (this.getDescricao().equals(o.getDescricao())&&this.getData().equals(o.getData())){
+            return true;
+        }
+        return false;
     }
 
     @Override
